@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navbar</title>
+    
+    <!--font icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="stleysheet.css">
+</head>
+<body>
+<nav>
+    <ul class="sidebar">
+        <!--<li><i class="fa-solid fa-earth-africa"><span class="span"><strong>techy africa</strong></span></i></li>-->
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+        </svg></a></li>
+        <li><a href="#">blog</a></li>
+        <li><a href="#">forum</a></li>
+        <li><a href="#">product</a></li>
+        <li><a href="#">about us</a></li>
+    
+    </ul>
+    <ul>
+        <li><i class="fa-solid fa-earth-africa"><span class="span"><strong>techy africa</strong></span></i></li>
+        <li class="hideOnMobile"><a href="#">blog</a></li>
+        <li class="hideOnMobile"><a href="#">forum</a></li>
+        <li class="hideOnMobile"><a href="#">product</a></li>
+        <li class="hideOnMobile"><a href="#">about us</a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg></a></li>
+        
+    </ul>
+</nav>
+<div class="note">
+    <h1>The secret</h1>
+    <p><q>i will burn all bridges behind me, and stake my entire future on my ability to get what i want</q></p>
+</div>
+
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+</script>
+</body>
+</html>
